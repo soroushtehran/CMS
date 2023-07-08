@@ -1,0 +1,11 @@
+@import "./Scss/colors";
+@import "./Scss/mixins";
+
+.panel-wrapper{
+    height: 100vh;
+    background: $light-aside-background;
+}
+
+.main-wrapper{
+    background: $light-main-background;
+}

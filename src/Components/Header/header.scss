@@ -1,0 +1,9 @@
+@import "../../Scss/colors";
+@import "../../Scss/mixins";
+
+header {
+    @include width_height("100%", "100px");
+    border: 1px solid #000;
+
+    
+}

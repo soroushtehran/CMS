@@ -1,0 +1,35 @@
+@mixin flex-Styles($justify, $align, $wrap: "wrap") {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin width_height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin tranisition($property) {
+    transition: $property 0.5s ease;
+}
+
+@mixin border-style {
+    box-shadow: $shadow;
+    border-radius: $radius;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+@mixin icon-styles {
+    background-color: #efebeb !important;
+    color: #464749 !important;
+}
+
+@mixin multiline-ellipsis {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    white-space: pre-wrap;
+}

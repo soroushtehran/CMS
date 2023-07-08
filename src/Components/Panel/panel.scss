@@ -1,0 +1,43 @@
+@import "../../Scss/colors";
+@import "../../Scss/mixins";
+
+.sidebar {
+    @include width_height("100%", "100vh");
+    background: $light-aside-background;
+
+    h1 {
+        width: 90%;
+        font-size: 1.2em;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(209, 203, 203);
+        margin: 0 auto;
+        color: $light-headline;
+    }
+
+    ul {
+        @include width_height("100%", "auto");
+        margin-top: 15px;
+
+        li {
+            @include width_height("100%", "auto");
+
+            a {
+                @include width_height("100%", "auto");
+                background: $light-aside-background;
+                display: block;
+                padding: 20px;
+                color: $light-paraghraph;
+
+                &:hover {
+                    background: $light-main-background;
+                }
+            }
+        }
+    }
+}
+
+.active{
+    background: $light-main-background !important;
+}
