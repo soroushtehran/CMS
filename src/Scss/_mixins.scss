@@ -1,4 +1,5 @@
-@mixin flex-Styles($justify, $align, $wrap: "wrap") {
+@import 'var';
+@mixin flex-Styles($justify, $align, $wrap: wrap) {
     display: flex;
     justify-content: $justify;
     align-items: $align;

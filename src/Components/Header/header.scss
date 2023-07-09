@@ -2,8 +2,56 @@
 @import "../../Scss/mixins";
 
 header {
-    @include width_height("100%", "100px");
-    border: 1px solid #000;
+    @include width_height(100%, auto);
+    padding: 15px 0;
+    background: $light-aside-background;
 
-    
+    .header-content {
+        @include flex-Styles(space-between, center);
+        @include width_height(100%, auto);
+
+        .admin-profile {
+            @include flex-Styles(space-between, center);
+
+            .admin-profile-avatar {
+                @include width_height(70px, 70px);
+                margin-left: 10px;
+
+                img {
+                    @include width_height(100%, 100%);
+                    @include border-style;
+                    border-radius: 50%;
+                }
+            }
+
+            .admin-profile-info {
+                h2 {
+                    font-size: 1.5em;
+                }
+
+                h3 {
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        .admin-profile-Section-left {
+            @include flex-Styles(space-between, center);
+
+            .search-box {
+                height: 50px;
+
+                input {
+                    width: 350px;
+                }
+            }
+
+            button {
+                @include border-style;
+                padding: 6.5px 12px;
+                font-size: 1.5em;
+                margin-right: 10px;
+            }
+        }
+    }
 }
