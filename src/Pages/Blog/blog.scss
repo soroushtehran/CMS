@@ -1,0 +1,73 @@
+@import '../../Scss/mixins';
+@import '../../Scss/colors';
+
+.form-wrapper {
+    @include flex-Styles(center, stretch);
+    @include border-style;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #eee;
+
+    input,
+    textarea {
+        margin-bottom: 10px;
+        padding: 5px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+    }
+
+    button {
+        width: 50%;
+        align-self: center;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        background-color: #fff;
+        @include tranisition(all);
+
+        &:hover {
+            background-color: green;
+            color: white
+        }
+
+    }
+}
+
+.blog-img-wrapper {
+    @include flex-Styles(space-between, center);
+    display: flex;
+    justify-content: space-between;
+
+    .modal-image {
+        font-size: 25px;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: $light-button;
+        margin-bottom: 10px;
+        @include tranisition(all);
+
+        &:hover {
+            background-color: $light-button-text
+        }
+
+        svg {
+            @include icon-styles;
+
+        }
+    }
+
+    .input-img {
+        display: none;
+    }
+
+    img {
+        @include width_height(200px, 200px)
+    }
+}

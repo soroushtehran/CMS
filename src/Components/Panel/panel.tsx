@@ -17,6 +17,11 @@ export default function Panel() {
             isActive ? "active" : ""
           }
           to={'/Products'}> محصولات </NavLink></li>
+        <li><NavLink
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+          to={'/Blog'}> مقالات </NavLink></li>
       </ul>
     </aside>
   )
