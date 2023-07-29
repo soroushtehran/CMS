@@ -1,0 +1,5 @@
+@import "../../../Scss/mixins";
+
+.info-message {
+    @include my-wh(50px, 50px);
+}

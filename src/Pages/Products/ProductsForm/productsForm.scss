@@ -1,11 +1,12 @@
-@import "../../Scss/colors";
-@import "../../Scss/mixins";
+@import "../../../Scss/colors";
+@import "../../../Scss/mixins";
 
 .import-products {
     @include my-flex(space-between, center);
     @include my-wh(100%, 600px);
     @include my-border;
     margin-top: 60px;
+    margin-bottom: 100px;
     padding: 10px;
     position: relative;
     background: linear-gradient(45deg, $light-headline, $light-aside-background);

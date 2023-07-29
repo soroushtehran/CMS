@@ -1,0 +1,99 @@
+@import "../../../Scss/colors";
+@import "../../../Scss/mixins";
+
+@mixin my-img($width, $height) {
+    width: $width;
+    height: $height;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.table-wrapper {
+    @include my-border;
+    overflow: hidden;
+
+    .table-header {
+        @include my-flex(flex-start, center);
+        border: 1px solid #000;
+        padding: 10px 0;
+        background: linear-gradient(45deg, $light-main-background, #b8bcd5);
+
+        span {
+            font-weight: bold;
+            width: calc(100% / 9);
+            text-align: center;
+
+            &:first-of-type {
+                width: calc(100% / 9) * 2;
+            }
+        }
+    }
+
+    // .table-content {
+    @include my-border;
+    .table-content-item {
+        @include my-flex(flex-start, center);
+        position: relative;
+        border-right: 1px solid #000;
+        border-left: 1px solid #000;
+        background: $light-headline;
+        color: $light-main-background;
+        margin-bottom: 5px;
+
+        .content-item-img {
+            @include my-img(calc(100% / 9) * 2, 150px);
+            padding: 10px;
+        }
+
+        .content-item-price {
+            @include my-flex(center, center);
+            width: calc(100% / 9);
+            height: 100px;
+            border-right: 1px solid gray;
+            align-content: center;
+
+            span {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        > span {
+            @include my-flex(center, center);
+            width: calc(100% / 9);
+            height: 100px;
+            border-right: 1px solid gray;
+        }
+
+        .content-item-actions {
+            @include my-flex(center, center);
+            @include my-wh(100%, 100%, true);
+            @include my-tranisition(all);
+            top: 0;
+            right: 0;
+            background: rgba(35, 41, 70, 0.889);
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+
+            button {
+                @include my-tranisition(opacity);
+                transition-duration: 1s;
+                transition-delay: 0.3s;
+                opacity: 0;
+            }
+
+            &:hover button {
+                opacity: 1;
+            }
+        }
+
+        &:hover .content-item-actions {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

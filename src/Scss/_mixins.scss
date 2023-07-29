@@ -1,36 +1,57 @@
-@import 'var';
-@mixin flex-Styles($justify, $align, $wrap: wrap) {
+@import "var";
+@mixin my-flex($justify, $align, $wrap: wrap) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-wrap: $wrap;
 }
 
-@mixin width_height($width, $height) {
+@mixin my-wh($width, $height, $isImportant: false) {
     width: $width;
     height: $height;
+    @if($isImportant){
+        width: $width !important;
+        height: $height !important; 
+    }
 }
 
-@mixin tranisition($property) {
+@mixin my-tranisition($property) {
     transition: $property 0.5s ease;
 }
 
-@mixin border-style {
+@mixin my-border {
     box-shadow: $shadow;
     border-radius: $radius;
     border: 1px solid #ccc;
     overflow: hidden;
 }
 
-@mixin icon-styles {
+@mixin my-icon {
     background-color: #efebeb !important;
     color: #464749 !important;
 }
 
-@mixin multiline-ellipsis {
+@mixin my-multiline-ellipsis {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     white-space: pre-wrap;
+}
+
+@mixin my-form-input {
+    padding: 7px 10px;
+    outline: 0 !important;
+    width: 90%;
+    border-radius: 5px;
+    border-top: 0;
+    border-right: 0;
+}
+
+@mixin my-form-label {
+    font-weight: bold;
+
+    &:not(&:first-of-type) {
+        margin-top: 15px;
+    }
 }

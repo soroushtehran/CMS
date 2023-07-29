@@ -2,24 +2,24 @@
 @import "../../Scss/mixins";
 
 header {
-    @include width_height(100%, auto);
+    @include my-wh(100%, auto);
     padding: 15px 0;
     background: $light-aside-background;
 
     .header-content {
-        @include flex-Styles(space-between, center);
-        @include width_height(100%, auto);
+        @include my-flex(space-between, center);
+        @include my-wh(100%, auto);
 
         .admin-profile {
-            @include flex-Styles(space-between, center);
+            @include my-flex(space-between, center);
 
             .admin-profile-avatar {
-                @include width_height(70px, 70px);
+                @include my-wh(70px, 70px);
                 margin-left: 10px;
 
                 img {
-                    @include width_height(100%, 100%);
-                    @include border-style;
+                    @include my-wh(100%, 100%);
+                    @include my-border;
                     border-radius: 50%;
                 }
             }
@@ -36,7 +36,7 @@ header {
         }
 
         .admin-profile-Section-left {
-            @include flex-Styles(space-between, center);
+            @include my-flex(space-between, center);
 
             .search-box {
                 height: 50px;
@@ -51,7 +51,7 @@ header {
             }
 
             button {
-                @include border-style;
+                @include my-border;
                 padding: 6.5px 12px;
                 font-size: 1.5em;
                 margin-right: 10px;

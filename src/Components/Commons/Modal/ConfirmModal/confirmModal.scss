@@ -1,0 +1,47 @@
+@import "../../../../Scss/colors";
+@import "../../../../Scss/mixins";
+
+.modal-wrapper {
+    @include my-wh(100%, 100vh);
+    @include my-flex(center, center);
+    @include my-tranisition(0.5s);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(234, 236, 246, 0.5) !important;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+
+    .modal-content {
+        @include my-wh(600px, auto);
+        @include my-border;
+        padding: 30px 50px;
+        background: $light-headline;
+        color: $light-main-background;
+        opacity: 1;
+        outline: none;
+        border: none;        
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        div {
+            @include my-flex(flex-end, center);
+
+            button {
+                padding: 10px 20px;
+
+                &:last-of-type{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}

@@ -2,8 +2,8 @@
 @import '../../Scss/colors';
 
 .form-wrapper {
-    @include flex-Styles(center, stretch);
-    @include border-style;
+    @include my-flex(center, stretch);
+    @include my-border;
     flex-direction: column;
     margin-top: 30px;
     padding: 10px;
@@ -28,7 +28,7 @@
         font-weight: bold;
         border: none;
         background-color: #fff;
-        @include tranisition(all);
+        @include my-tranisition(all);
 
         &:hover {
             background-color: green;
@@ -39,7 +39,7 @@
 }
 
 .blog-img-wrapper {
-    @include flex-Styles(space-between, center);
+    @include my-flex(space-between, center);
     display: flex;
     justify-content: space-between;
 
@@ -51,14 +51,14 @@
         cursor: pointer;
         background-color: $light-button;
         margin-bottom: 10px;
-        @include tranisition(all);
+        @include my-tranisition(all);
 
         &:hover {
             background-color: $light-button-text
         }
 
         svg {
-            @include icon-styles;
+            @include my-icon;
 
         }
     }
@@ -68,6 +68,6 @@
     }
 
     img {
-        @include width_height(200px, 200px)
+        @include my-wh(200px, 200px)
     }
 }

@@ -1,0 +1,13 @@
+@import "../../../Scss/colors";
+@import "../../../Scss/mixins";
+
+.my-button {
+  @include my-border;
+  padding: 15px 30px;
+  color: white;
+  cursor: pointer !important;
+}
+
+.containedStyles {
+  // background: $light-button;
+}
